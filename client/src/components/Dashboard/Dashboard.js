@@ -68,7 +68,7 @@ class Dashboard extends React.Component {
       <React.Fragment>
         <Navbar />
         <div className="container mt-5">
-          <h4>Videos</h4>
+          <h4>Videos on server:</h4>
           <hr className="my-4" />
 
           <div className="streams row">

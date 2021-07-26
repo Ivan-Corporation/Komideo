@@ -1,17 +1,22 @@
+
+
 .video-thumbnail img {
   width: 100%;
+  
+  border: solid 1px #000000
 }
 
 .video-title {
-  position: absolute;
   font-size: 1.2rem;
   font-weight: 700;
+  text-decoration: underline 2px solid black;
+
 }
 
 .username {
   position: absolute;
-  bottom: 5px;
-  left: 20px;
+  top: 0px;
+
   background-color: black;
 }
 

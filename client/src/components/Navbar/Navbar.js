@@ -11,9 +11,11 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-info">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-danger">
         <div className="container">
-          <Link className="navbar-brand" to="/">VideoServer</Link>
+          <Link className="navbar-brand" to="/">
+            <h2>Komideo</h2>
+          </Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -21,13 +23,13 @@ class Navbar extends React.Component {
             <div className="navbar-nav">
               {this.state.loggedIn ?
                 <React.Fragment>
-                  <NavLink className="nav-item nav-link" to="/" exact>Home</NavLink>
-                  <NavLink className="nav-item nav-link" to="/upload">Upload</NavLink>
+                  <NavLink className="nav-item nav-link" to="/" exact>Home /</NavLink>
+                  <NavLink className="nav-item nav-link" to="/upload">Upload /</NavLink>
                   <NavLink className="nav-item nav-link" to="/signOut">Sign Out</NavLink>
                 </React.Fragment>
                 :
                 <React.Fragment>
-                  <NavLink className="nav-item nav-link" to="/signIn">Sign In</NavLink>
+                  <NavLink className="nav-item nav-link" to="/signIn">Sign In</NavLink>|
                   <NavLink className="nav-item nav-link" to="/signUp">Sign Up</NavLink>
                 </React.Fragment>}
             </div>
