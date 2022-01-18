@@ -64,6 +64,7 @@ class Upload extends React.Component {
       }
     }).then(res => {
       toast.success('Upload Successful');
+
     }).catch(err => {
       toast.error(`Upload Fail with status: ${err.statusText}`);
     });

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { Nav, NavItem } from 'reactstrap'
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-danger">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
           <Link className="navbar-brand" to="/">
             <h2>Komideo</h2>
@@ -23,9 +24,15 @@ class Navbar extends React.Component {
             <div className="navbar-nav">
               {this.state.loggedIn ?
                 <React.Fragment>
-                  <NavLink className="nav-item nav-link" to="/" exact>Home /</NavLink>
-                  <NavLink className="nav-item nav-link" to="/upload">Upload /</NavLink>
-                  <NavLink className="nav-item nav-link" to="/signOut">Sign Out</NavLink>
+                  <Nav
+                    pills
+                    tabs
+                  >
+
+                    <NavItem><NavLink className="nav-item nav-link" to="/" exact>Home </NavLink></NavItem>
+                    <NavItem><NavLink className="nav-item nav-link" to="/upload">Upload </NavLink></NavItem>
+                    <NavItem><NavLink className="nav-item nav-link" to="/signOut">Sign Out</NavLink></NavItem>
+                  </Nav>
                 </React.Fragment>
                 :
                 <React.Fragment>
